@@ -1,0 +1,24 @@
+.top-nav {
+    @include desktop {
+        top: 20px !important;
+        left: 100px !important;
+    }
+    @include labtop {
+        top: 20px !important;
+        left: 100px !important;
+    }
+    @include tablet {
+        top: 20px !important;
+        left: 60px !important;
+    }
+
+    @include mobile {
+        bottom: 40px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    width: fit-content !important;
+    .v-toolbar__content {
+        height: 100% !important;
+    }
+}

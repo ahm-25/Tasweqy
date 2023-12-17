@@ -1,0 +1,40 @@
+.font-bold {
+    font-weight: bold;
+}
+.primary-light {
+    background-color: $primary-light !important;
+}
+.transparent {
+    background-color: transparent !important;
+}
+.bg-white {
+    background-color: $white !important;
+}
+.h-100 {
+    height: 100%;
+}
+.hv-100 {
+    height: 100vh;
+}
+.w-100 {
+    width: 100%;
+}
+
+@for $i from 0 through 40 {
+    .size-#{$i} {
+        font-size: #{$i}px !important;
+    }
+    .radius-#{$i} {
+        border-radius: #{$i}px !important;
+    }
+    .lin-height-#{$i} {
+        line-height: #{$i}px !important;
+    }
+}
+
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute !important;
+}

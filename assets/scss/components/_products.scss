@@ -1,0 +1,138 @@
+.products {
+    .v-slide-group__wrapper {
+        overflow-x: auto; /* Enables the horizontal scrollbar */
+        /* Next lines hides scrollbar in different browsers for styling purposes */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .v-slide-group__wrapper::-webkit-scrollbar {
+        display: none; /* Chrome opera and Safary */
+        width: 0px;
+        background: transparent;
+    }
+    // &__card {
+    //     @include desktop {
+    //         padding: 100px;
+    //     }
+    // }
+    &__close {
+        position: absolute !important;
+        top: 20px !important;
+        right: 20px !important;
+        @include desktop {
+            transform: translate(40%, -40%) !important;
+        }
+        @include labtop {
+            transform: translate(40%, -40%) !important;
+        }
+    }
+    min-height: 100vh;
+    padding-bottom: 150px;
+    &__hero {
+        position: relative;
+        min-height: 50vh;
+        background: linear-gradient(#c2e8fc, #fff);
+        &__contact {
+            @include mobile {
+                font-size: 12px !important;
+            }
+        }
+        &__content {
+            margin-top: 50px;
+        }
+    }
+    &__filter-card {
+        position: sticky !important;
+        top: 30% !important;
+        border-radius: 25px !important;
+        @include tablet {
+            margin-top: 10px;
+            width: 50% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        &__type {
+            padding: 8px !important;
+            font-size: 16px !important;
+            margin-bottom: 16px !important;
+        }
+        &__select {
+            border-radius: 26px !important;
+            width: 100%;
+            color: #354b41;
+        }
+        &__price {
+            padding: 8px !important;
+            font-size: 16px !important;
+            margin-bottom: 16px !important;
+        }
+        @include mobile {
+            transform: translateY(20px);
+        }
+    }
+    .transform {
+        transform: translateY(-30px);
+    }
+    @include mobile {
+        .first-order {
+            order: -1 !important;
+        }
+    }
+    @include tablet {
+        .first-order {
+            order: -1 !important;
+        }
+    }
+    &__dialog {
+        &__description {
+            padding: 0;
+            p {
+                position: relative;
+                height: 3em;
+                line-height: 1.5em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 12px;
+            }
+        }
+        .v-list {
+            &:hover {
+                background-color: #c2e8fc !important;
+            }
+        }
+        .background {
+            background: #1e1e1e;
+            height: 100vh;
+        }
+    }
+}
+.center-input {
+    input {
+        text-align: center !important;
+    }
+}
+.size-sm-16 {
+    @include mobile {
+        font-size: 20px !important;
+    }
+}
+.size-sm-12 {
+    @include mobile {
+        font-size: 12px !important;
+    }
+}
+.bolt {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $third;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    &.active {
+        width: 16px;
+        background-color: $primary;
+        border-radius: 4px !important ;
+    }
+}

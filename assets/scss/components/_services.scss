@@ -1,0 +1,9 @@
+.services {
+    padding-bottom: 150px;
+   
+}
+.text-xs-center {
+    @include mobile {
+        text-align: center !important;
+    }
+}

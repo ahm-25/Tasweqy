@@ -1,0 +1,43 @@
+{
+  "login": "Login",
+  "sign_up": "Sign Up",
+  "login_subtitle": "",
+  "have_not_account": "",
+  "have_account": "",
+  "create_new_account": "create new account",
+  "sign_up_subtitle": "",
+  "sign_up_now": "",
+  "remember_me": "",
+  "terms_and_condition": "",
+  "not_worry": "",
+  "back": "back",
+  "send": "Send",
+  "confirm": "Confirm",
+  "check_number": "",
+  "enter_the_number": "",
+  "forget_password": "Forget Password ?",
+  "login_now": "",
+  "create_new_password": "Create New password",
+  "not_repeat_password": "يجب ان تكون كلمة المرور الجديدة مختلفة عن السابقة",
+  "new_password": "",
+  "confirm_new_password":"",
+  "fields": {
+    "first_name": "first name",
+    "otp_code": "Otp Code",
+    "new_password": "New Password",
+    "confirm_password": "Confirm Password",
+    "company_name": "Company Name",
+    "commercial_register": "Commercial Register",
+    "city": "City",
+    "rating_details": "Rating details...",
+    "commercial_number": "Commercial Number",
+    "image": "Personal Image",
+    "new_current_password": "Current Password ..",
+    "bank_name": "bank Name",
+    "iban": "iban",
+    "years_of_experience": "years_of_experience"
+  },
+  "validations": {
+    "required": "this field is required"
+  }
+}

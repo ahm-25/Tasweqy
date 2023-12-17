@@ -1,0 +1,64 @@
+.footer {
+    .image {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $light-green;
+            width: 40%;
+            top: 50%;
+            /* left: 10px; */
+            height: 2px;
+            transform: translateY(-50%);
+            right: -5px;
+            @include mobile {
+                width: 30% !important;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: $light-green;
+            width: 40%;
+            top: 50%;
+            /* left: 10px; */
+            height: 2px;
+            transform: translateY(-50%);
+            left: -5px;
+            @include mobile {
+                max-width: 30% !important;
+            }
+        }
+    }
+    &__social-icon {
+        @include mobile {
+            max-width: 40%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    &__links {
+        @include mobile {
+            margin-bottom: 16px;
+        }
+        &__condition {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 2px;
+                background: $secondary;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -20px;
+            }
+        }
+    }
+    &__rights {
+        @include mobile {
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+* {
+    font-family: "Bahij TheSansArabic" !important;
+    letter-spacing: 0px !important;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+
+/* we will explain what these classes do next! */
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: all 1s ease-in-out;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateX(100%);
+}
+
+.translate-enter-active,
+.translate-leave-active {
+    transition: all 1s linear;
+}
+
+.translate-enter-from,
+.translate-leave-to {
+    transform: translateY(100%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary;
+}
+
+.text-small {
+    @include mobile {
+        font-size: 8px !important;
+    }
+}
+.back-button {
+    top: 90px !important;
+    z-index: 3;
+    @include desktop {
+        right: 320px;
+    }
+    @include labtop {
+        right: 320px;
+    }
+    @include tablet {
+        right: 20px;
+    }
+    @include mobile {
+        display: none !important;
+        // left: 20px !important;
+        // top: 20px !important;
+        // height: 50px !important;
+        // width: 50px !important;
+    }
+}
+
+.card-shadow {
+    box-shadow: 0px 20px 20px rgba(0, 56, 39, 0.1) !important ;
+}
+.v-card {
+    @include transition(0.5);
+    box-shadow: none;
+}
+.v-ripple__container {
+    display: none !important;
+}
+.v-card--link:before {
+    background: initial !important;
+}
+.first-order {
+    @include mobile {
+        order: -1;
+    }
+    @include tablet {
+        order: -1;
+    }
+}
+.v-image__image--cover {
+    border-radius: 8px !important;
+}
+.size-md-16 {
+    @include labtop {
+        font-size: 16px;
+    }
+    @include tablet {
+        font-size: 16px;
+    }
+    @include labtop {
+        font-size: 16px;
+    }
+}

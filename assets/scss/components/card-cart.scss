@@ -1,0 +1,12 @@
+.card-cart {
+    .v-card {
+        box-shadow: 0px 20px 20px rgba(0, 56, 39, 0.1) !important;
+
+        .show-icons {
+            visibility: visible !important;
+        }
+    }
+    .v-card:not(.on-hover) {
+        box-shadow: none !important;
+    }
+}

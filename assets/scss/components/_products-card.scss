@@ -1,0 +1,15 @@
+.products-card {
+    border-radius: 25px !important;
+    &__title {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+    }
+    &__price {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+    }
+    &__currency {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+    }
+}

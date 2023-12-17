@@ -1,0 +1,25 @@
+.frame-shapes {
+    position: relative;
+    &::after {
+        content: "";
+        background-image: url("../images/right_frame.svg");
+        position: absolute;
+        right: -67px;
+        top: 0;
+        width: 835px;
+        height: 500px;
+        display: block;
+        transform: translateY(-100px);
+    }
+    &::before {
+        content: "";
+        background-image: url("../images/left_frame.svg");
+        position: absolute;
+        left: 0px;
+        top: -20px;
+        width: 835px;
+        height: 500px;
+        display: block;
+        transform: translateY(-100px);
+    }
+}

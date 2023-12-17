@@ -1,0 +1,38 @@
+.suppliers {
+    padding-bottom: 150px;
+    min-height: 100vh;
+    &__heading {
+        font-size: 30px !important;
+        font-weight: 700 !important;
+    }
+    &__card-supplier {
+        &__title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 22px !important;
+        }
+        &__products {
+            font-size: 14px;
+        }
+    }
+
+    &__card {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 30% !important;
+
+        &__title {
+            padding: 8px !important;
+            font-size: 16px !important;
+            margin-bottom: 16px !important;
+        }
+        &__select {
+            border-radius: 26px !important;
+            width: 100%;
+            color: #354b41;
+        }
+    }
+    .transform {
+        transform: translateY(-40px);
+    }
+}

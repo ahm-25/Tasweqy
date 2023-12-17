@@ -1,0 +1,18 @@
+.events {
+    &__container {
+        @include mobile {
+            margin-top: 200px;
+        }
+    }
+}
+.event-card {
+    @include transition(0.3);
+    border-radius: 16px !important;
+
+    &:hover {
+        box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19) !important;
+    }
+    @include mobile {
+        box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19) !important;
+    }
+}

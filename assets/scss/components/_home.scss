@@ -1,0 +1,63 @@
+.home-page {
+    min-height: 100vh;
+    // background-image: url("../images/home_photo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.6s ease !important;
+    @include mobile {
+        background-position: top;
+    }
+    &__center {
+        @include mobile {
+            text-align: center;
+        }
+        @include tablet {
+            text-align: center;
+        }
+    }
+    &__title {
+        font-size: 56px;
+        @include mobile {
+            font-size: 20px;
+        }
+        @include tablet {
+            font-size: 30px;
+        }
+        @include labtop {
+            font-size: 35px;
+        }
+    }
+    &__description {
+        font-size: 14px;
+    }
+    .text-shadow {
+        position: relative;
+        z-index: 2;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 104%;
+            height: 25px;
+            left: 0;
+            right: 0;
+            bottom: 25px;
+            display: block;
+            z-index: -1;
+            background-color: $secondary;
+            opacity: 0.8;
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+    .v-btn {
+        border-radius: 27px !important;
+        height: 56px !important;
+        font-size: 20px !important;
+
+        font-weight: bold !important;
+    }
+}

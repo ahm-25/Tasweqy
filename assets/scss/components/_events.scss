@@ -1,0 +1,26 @@
+.events,
+.categories {
+    min-height: 100vh;
+    padding-bottom: 150px;
+    &__container {
+        @include mobile {
+            margin-top: 260px;
+        }
+    }
+}
+
+.transform {
+    transform: translateY(-50px);
+    @include mobile {
+        transform: translateY(0px);
+    }
+}
+.custom-divider {
+    max-height: calc(100% - 24px);
+    margin-top: 8px !important;
+}
+@include mobile {
+    .col {
+        flex-basis: inherit !important;
+    }
+}

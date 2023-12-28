@@ -1,40 +1,54 @@
 .font-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 .primary-light {
-    background-color: $primary-light !important;
+  background-color: $primary-light !important;
 }
 .transparent {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 .bg-white {
-    background-color: $white !important;
+  background-color: $white !important;
 }
 .h-100 {
-    height: 100%;
+  height: 100%;
 }
 .hv-100 {
-    height: 100vh;
+  height: 100vh;
 }
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 @for $i from 0 through 40 {
-    .size-#{$i} {
-        font-size: #{$i}px !important;
-    }
-    .radius-#{$i} {
-        border-radius: #{$i}px !important;
-    }
-    .lin-height-#{$i} {
-        line-height: #{$i}px !important;
-    }
+  .size-#{$i} {
+    font-size: #{$i}px !important;
+  }
+  .radius-#{$i} {
+    border-radius: #{$i}px !important;
+  }
+  .lin-height-#{$i} {
+    line-height: #{$i}px !important;
+  }
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 .absolute {
-    position: absolute !important;
+  position: absolute !important;
+}
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

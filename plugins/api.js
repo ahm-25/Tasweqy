@@ -1,13 +1,13 @@
 export default function ({ $axios }, inject) {
   class HttpClient {
-    get({ path, query, param = '' }) {
-      return $axios.get(`${path}${param && '/' + param}`, {
+    get({ url, query }) {
+      return $axios.get(url, {
         params: { ...query },
       })
     }
 
-    post({ path, data }) {
-      return $axios.post(path, data)
+    post({ url, data }) {
+      return $axios.post(url, data)
     }
   }
   // Inject to context as $http

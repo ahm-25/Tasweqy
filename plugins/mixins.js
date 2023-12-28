@@ -10,7 +10,7 @@ if (!Vue.__my_mixin__) {
       ...mapGetters({
         getQuery: "query/getQuery",
         serverErrors: "errors/serverErrors",
-        settings: "settings",
+        // settings: "settings",
       }),
     },
     data() {

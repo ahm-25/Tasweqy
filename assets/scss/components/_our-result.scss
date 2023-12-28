@@ -1,0 +1,75 @@
+.our-result {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: rgb(128 128 128 / 8%);
+  .v-image {
+    @include mobile {
+      display: none !important;
+    }
+  }
+  .v-card {
+    @include mobile {
+      width: 100% !important;
+    }
+  }
+  .stats {
+    position: relative;
+
+    .v-card__title {
+      color: $secondary;
+      font-size: 56px;
+      font-weight: 700;
+      @include labtoplg {
+        font-size: 46px;
+      }
+      @include labtop {
+        font-size: 40px;
+      }
+      @include labtop {
+        font-size: 36px;
+      }
+      @include labtop {
+        font-size: 32px;
+      }
+    }
+    .v-card {
+      background-color: transparent !important;
+    }
+    .v-card__text {
+      color: $primary !important;
+      font-size: 24px !important;
+      font-weight: 700 !important;
+    }
+  }
+  .divder {
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.38);
+    left: 55%;
+    margin-top: 30px;
+    @include mobile {
+      opacity: 0;
+    }
+    @include tablet {
+      opacity: 0;
+    }
+  }
+  .hr-divder {
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.38);
+    top: 40%;
+    margin: 30px;
+    @include mobile {
+      opacity: 0;
+    }
+    @include tablet {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.partners-succsess {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .v-card {
+    border: 1px solid $primary-light !important;
+    span {
+      color: $primary;
+    }
+  }
+}

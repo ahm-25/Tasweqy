@@ -20,7 +20,7 @@
   "create_new_password": "Create New password",
   "not_repeat_password": "يجب ان تكون كلمة المرور الجديدة مختلفة عن السابقة",
   "new_password": "",
-  "confirm_new_password":"",
+  "confirm_new_password": "",
   "fields": {
     "first_name": "first name",
     "otp_code": "Otp Code",
@@ -38,6 +38,26 @@
     "years_of_experience": "years_of_experience"
   },
   "validations": {
-    "required": "this field is required"
+    "required": "this field is required",
+    "validPhoneNumber":"This phone number is invalid "
+  },
+  "homepage": {
+    "about_us": "About Us",
+    "our_result": "Our Result",
+    "our_offers": "Our Offers",
+    "Client Feedback": "Client Feedback",
+    "Enjoy a diverse range of financial services": "Enjoy a diverse range of financial services.",
+    "finance": "Finance",
+    "What did they say about us?": "What did they say about us?",
+    "personal financing": "personal financing",
+    "What do we offer in our marketing": "What do we offer in our marketing",
+    "our marketing": "our marketing",
+    "Our marketing team offers you all": "Our marketing team offers you all",
+    "the facilities and financing services": "the facilities and financing services",
+    "Your secure and reliable path to obtaining financing": "Your secure and reliable path to obtaining financing",
+    "in numbers": "in numbers",
+    "We excel in providing all financial services in one place": "We excel in providing all financial services in one place",
+    "Buying, Installment, and Financing of Cars": "Buying, Installment, and Financing of Cars",
+    "Enjoy a variety of cars": "Enjoy a variety of cars"
   }
 }

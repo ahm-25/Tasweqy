@@ -4,8 +4,16 @@
 @import "./public", "./global-class";
 
 // components
-@import "./components/home", "./components/app-bar", "./components/frame-shapes", "./components/login",
-    "./components/dialog", "./components/profile", "./components/event-card", "./components/services",
-    "./components/event-details", "./components/platform", "./components/main-footer", "./components/partners",
-    "./components/contact_us", "./components/events", "./components/products", "./components/suppliers-card",
-    "./components/products-card", "./components/top-nav", "./components/products-dialog";
+@import "./components/home", "./components/app-bar", "./components/frame-shapes",
+  "./components/login", "./components/dialog", "./components/profile",
+  "./components/event-card", "./components/services",
+  "./components/event-details", "./components/platform",
+  "./components/main-footer", "./components/partners", "./components/contact_us",
+  "./components/events", "./components/products", "./components/suppliers-card",
+  "./components/products-card", "./components/top-nav",
+  "./components/products-dialog", "./components/top-bar", "./components/navbar",
+  "./components/footer", "./components/hero-slider", "./components/home_title",
+  "./components/about-us", "./components/our-result", "./components/our-offers",
+  "./components/our-cars", "./components/client-feedback",
+  "./components/finance", "./components/latest-news",
+  "./components/partners-succsess";

@@ -1,0 +1,52 @@
+.home-title {
+  margin-bottom: 100px;
+  .section-heading {
+    gap: 12px;
+    h3 {
+      color: $secondary;
+      font-size: 24px;
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+  }
+  h6 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+
+    @include mobile {
+      font-size: 24px;
+    }
+    @include tablet {
+      font-size: 30px;
+    }
+    @include labtop {
+      font-size: 30px;
+    }
+    @include labtoplg {
+      font-size: 30px;
+    }
+    span {
+      color: $primary;
+    }
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    color: $text-light;
+    text-align: center;
+    @include mobile {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+    @include labtop {
+      font-size: 16px;
+    }
+    @include labtoplg {
+      font-size: 16px;
+    }
+  }
+}

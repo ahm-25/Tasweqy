@@ -1,0 +1,28 @@
+.finance {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: rgba(128, 128, 128, 0.078);
+  .v-card {
+    margin: 20px !important;
+    width: 300px !important;
+    .v-btn {
+      width: 90% !important;
+    }
+  }
+  .v-slide-group__content.v-tabs-bar__content {
+    background: rgba(128, 128, 128, 0.078) !important;
+  }
+  .v-tabs-items {
+    background: transparent !important;
+  }
+  // hooper slider
+  .hooper-slide {
+    margin: 10px;
+  }
+  .hooper-pagination {
+    bottom: -8px !important;
+    button.is-active {
+      background-color: $secondary;
+    }
+  }
+}

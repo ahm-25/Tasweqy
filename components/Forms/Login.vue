@@ -4,7 +4,15 @@
       <v-form @submit.prevent="handleSubmit(onSubmit)">
         <v-card class="form-card radius-24" width="592px">
           <div class="d-flex justify-end mb-6 back">
-            <v-btn class="pl-0" text>
+            <v-btn
+              class="pl-0"
+              text
+              :to="
+                localePath({
+                  path: `/`,
+                })
+              "
+              >1
               <span>العودة إلى الرئيسية</span>
               <v-icon large>mdi-chevron-left </v-icon></v-btn
             >
@@ -30,7 +38,7 @@
                 class="radius-16"
                 type="email"
                 errorName="username"
-                v-model="form.username"
+                v-model="form.email"
                 v-bind="attrs"
                 dense
                 outlined
@@ -87,12 +95,15 @@
             <div class="d-flex align-center">
               <v-checkbox
                 v-model="form.rememberMe"
-                :error-messages="errors"
                 type="checkbox"
               ></v-checkbox>
-              <label class="mb-0">{{ $t("terms_and_condition") }}</label>
+              <label class="mb-0">{{ $t("remember_me") }}</label>
             </div>
-            <v-btn text color="primary" :to="localePath({ path: '/forget-password' })">
+            <v-btn
+              text
+              color="primary"
+              :to="localePath({ path: '/forget-password' })"
+            >
               <span>{{ $t("forget_password") }}</span>
             </v-btn>
           </div>
@@ -115,14 +126,32 @@ export default {
     return {
       dialog: false,
       confirmDialog: false,
-      user_token: "",
       loading: false,
       showPassword: false,
       form: {
-        username: "",
+        email: "",
         password: "",
       },
     };
+  },
+  methods: {
+    async onSubmit() {
+      try {
+        this.loading = true;
+        const res = await this.$http.post({
+          url: "auth/login",
+          data: this.form,
+        });
+        const {
+          body: { user, token },
+        } = res.data;
+        this.$auth.setUserToken(token);
+        this.$auth.setUser(user);
+        this.$router.push("/");
+      } finally {
+        this.loading = false;
+      }
+    },
   },
 };
 </script>

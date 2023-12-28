@@ -1,7 +1,7 @@
 <template>
   <main>
     <ValidationObserver v-slot="{ handleSubmit }">
-      <v-form @submit.prevent="handleSubmit(onSubmit)">
+      <v-form @submit.prevent="handleSubmit(handleSignup)">
         <v-card class="form-card radius-24" width="592px">
           <div class="d-flex justify-end mb-6 back">
             <v-btn class="pl-0" text :to="localePath({ path: '/login' })">
@@ -18,15 +18,16 @@
             name="name"
             :rules="{
               required: true,
+              min: 8,
             }"
           >
             <template #default="{ attrs }">
               <label>{{ $t("fields.name") }}</label>
               <v-text-field
                 class="radius-16"
-                type="name"
-                errorName="username"
-                v-model="form.username"
+                type="text"
+                errorName="name"
+                v-model="form.name"
                 v-bind="attrs"
                 dense
                 outlined
@@ -51,7 +52,7 @@
               <v-text-field
                 class="radius-16"
                 type="email"
-                errorName="username"
+                errorName="email"
                 v-model="form.email"
                 v-bind="attrs"
                 dense
@@ -67,7 +68,35 @@
               </v-text-field>
             </template>
           </LazyFormGroup>
-          <LazyFormGroup name="password" :rules="{ required: true }">
+          <LazyFormGroup
+            name="phone"
+            :rules="{
+              required: true,
+              validPhoneNumber:true
+            }"
+          >
+            <template #default="{ attrs }">
+              <label>{{ $t("fields.phone") }}</label>
+              <v-text-field
+                class="radius-16"
+                type="phone"
+                errorName="phone"
+                v-model="form.phone"
+                v-bind="attrs"
+                dense
+                outlined
+                color="primary"
+                :placeholder="$t(`fields.phone`) + '...'"
+              >
+                <template v-slot:prepend-inner>
+                  <v-icon color="light-secondary">{{
+                    `mdi-email-outline`
+                  }}</v-icon>
+                </template>
+              </v-text-field>
+            </template>
+          </LazyFormGroup>
+          <LazyFormGroup name="password" :rules="{ required: true, min: 8 }">
             <template #default="{ attrs }">
               <label>{{ $t("fields.password") }}</label>
               <v-text-field
@@ -95,7 +124,7 @@
             </template>
           </LazyFormGroup>
           <LazyFormGroup
-            name="confirm_password"
+            name="password_confirmation"
             :rules="{ required: true, confirmed: 'password' }"
           >
             <template #default="{ attrs }">
@@ -103,16 +132,19 @@
               <v-text-field
                 class="radius-16"
                 :type="showPassword ? 'text' : 'password'"
-                errorName="confirm_password"
-                v-model="form.confirm_password"
+                errorName="password_confirmation"
+                v-model="form.password_confirmation"
                 v-bind="attrs"
                 outlined
                 dense
                 color="primary"
-                :placeholder="$t(`fields.confirm_password`) + '...'"
+                :placeholder="$t(`fields.password_confirmation`) + '...'"
               >
                 <template v-slot:append>
-                  <v-btn icon @click="showConfirmPassword = !showConfirmPassword">
+                  <v-btn
+                    icon
+                    @click="showConfirmPassword = !showConfirmPassword"
+                  >
                     <v-icon :color="showConfirmPassword ? 'primary' : ''">
                       {{ showConfirmPassword ? "mdi-eye-off" : "mdi-eye" }}
                     </v-icon>
@@ -139,10 +171,9 @@
           <div class="d-flex align-center">
             <v-checkbox
               v-model="form.rememberMe"
-              :error-messages="errors"
               type="checkbox"
             ></v-checkbox>
-            <label class="mb-0">{{ $t("remember_me") }}</label>
+            <label class="mb-0">{{ $t("terms_and_condition") }}</label>
           </div>
           <v-row align="center" justify="center" class="sign-up-option mt-2">
             <p class="mb-0">{{ $t("have_account") }}</p>
@@ -163,18 +194,39 @@ export default {
     return {
       dialog: false,
       confirmDialog: false,
-      showConfirmPassword:false,
+      showConfirmPassword: false,
       user_token: "",
       loading: false,
       showPassword: false,
       form: {
-        username: "",
+        name: "",
         email: "",
         password: "",
-        confirm_password: "",
+        password_confirmation: "",
+        phone: "",
         rememberMe: "",
       },
     };
+  },
+
+  methods: {
+    async handleSignup() {
+      try {
+        this.loading = true;
+        const res = await this.$http.post({
+          url: "auth/register",
+          data: this.form,
+        });
+        const {
+          body:{user,token},
+        } = res.data;
+        this.$auth.setUserToken(token);
+        this.$auth.setUser(user);
+        this.$router.push('/')
+      } finally {
+        this.loading = false;
+      }
+    },
   },
 };
 </script>

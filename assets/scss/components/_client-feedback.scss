@@ -1,0 +1,44 @@
+.client-feedback {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(
+    102.72deg,
+    rgba(44, 94, 121, 0.9) 0%,
+    rgba(83, 123, 211, 0.9) 154.68%
+  );
+  .home-title {
+    h6 {
+      color: $white;
+    }
+    p {
+      color: $white;
+    }
+  }
+  //   card review
+  .v-card {
+    background: $primary-50 !important;
+    padding: 15px;
+
+    .card-heading {
+      gap: 10px !important;
+      h3 {
+        color: $white;
+        font-size: 20px;
+      }
+      p {
+        margin-bottom: 0;
+        color: $white;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+    .v-card__text {
+      color: $white !important;
+    }
+  }
+  .hooper-slide {
+    // @include mobile {
+    //   width: 100% !important;
+    // }
+  }
+}

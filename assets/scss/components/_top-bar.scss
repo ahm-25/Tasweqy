@@ -1,0 +1,23 @@
+.top-bar {
+  background-color: $primary;
+  max-height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .v-toolbar__content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  div {
+    gap: 10px;
+  }
+  a {
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    gap: 4px;
+  }
+  .v-icon {
+    color: $white !important;
+  }
+}

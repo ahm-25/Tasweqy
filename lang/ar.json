@@ -1,5 +1,6 @@
 {
   "login": "تسجيل الدخول",
+  "logout":"تسجيل خروج",
   "sign_up": "التسجيل",
   "have_not_account": "ليس لديك حساب ؟",
   "have_account": "لديك حساب بالفعل؟",
@@ -29,14 +30,15 @@
     "min": "{field} يجب ان لا يقل عن  {min} حروف",
     "email": "ادخل البريد اﻹلكتروني بطريقة صحيحة",
     "confirmed": "{field} غير متطابقة",
-    "mimes": "هذا الحقل يجب ان يكون من نوع {mimes}"
+    "mimes": "هذا الحقل يجب ان يكون من نوع {mimes}",
+    "validPhoneNumber":"رقم الجوال غير صحيح"
   },
   "fields": {
     "phone": "رقم الجوال",
     "email": "البريد اﻹلكتروني",
     "password": "كلمة المرور",
     "otp_code": "كود التأكيد",
-    "confirm_password": "تأكيد كلمة المرور",
+    "password_confirmation": "تأكيد كلمة المرور",
     "new_password": "كلمة المرور الجديدة",
     "company_name": "اسم الشركة",
     "commercial_register": "السجل التجاري",
@@ -55,5 +57,24 @@
     "bank_name": "اسم البنك",
     "iban": "ايبان",
     "years_of_experience": "عدد سنوات الخبره"
+  },
+  "homepage": {
+    "about_us": "من نحن",
+    "our_result": "نتائجنا",
+    "our_offers": "خدماتنا",
+    "Client Feedback": "أراء عملائنا",
+    "finance": "التمويل ",
+    "What do we offer in": "ماذا نقدم ف",
+    "What did they say about us?": "ماذا قالو عنا ؟",
+    "Enjoy a diverse range of financial services": "استمتع بمجموعه متنوعه من خدمات التمويل",
+    "our marketing": "تسويقي",
+    "personal financing": "تمويل شخصي",
+    "Our marketing team offers you all": "تسويقي تقدم لكم جميع ",
+    "the facilities and financing services": "التسهيلات وخدمات التمويل",
+    "Your secure and reliable path to obtaining financing": "طريقك الامن والموثوق لأخذ تمويل",
+    "in numbers": "بالارقام",
+    "We excel in providing all financial services in one place": "نتميز ف تقديم كافه خدمات التمويل ف مكان واحد",
+    "Buying, Installment, and Financing of Cars": "شراء و تقسيط و تمويل السيارات",
+    "Enjoy a variety of cars": "استمتع بمجموعه متنوعه من السيارات"
   }
 }
